@@ -1,0 +1,69 @@
+package Backtracking;
+
+
+
+public class WordSearch {
+    public static void main(String[] args) {
+        char[][] board = {
+                {'A', 'B', 'C', 'E'},
+                {'S', 'F', 'C', 'S'},
+                {'A', 'D', 'E', 'E'}
+        };
+
+        String word = "ABCCED";
+        boolean exist = exist(board, word);
+        System.out.println(word+" word exist : "+exist);
+    }
+
+    public static boolean exist(char[][] board, String word) {
+        int m = board.length;
+        int n = board[0].length;
+
+        for (int r = 0; r < m; r++) {
+            for (int c = 0; c < n; c++) {
+                if (word.charAt(0) == board[r][c]){
+                    boolean found = dfs(board, r, c, word, 0);
+                    if (found) return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static boolean dfs(char[][] board, int r, int c, String word, int wordIndex){
+        //base case
+        //valid case
+        if (wordIndex == word.length()){
+            return true;
+        }
+
+        //out of bound cases
+        int rows = board.length;
+        int cols = board[0].length;
+        if (r < 0 || c < 0 || r>=rows || c>=cols){
+            return false;
+        }
+        //invalid cases
+        if (board[r][c] == ' ' || board[r][c] != word.charAt(wordIndex)){
+            return false;
+        }
+
+        //mark as visited
+        char ch = board[r][c];
+        board[r][c] = ' ';
+
+        //dfs calls
+        if (
+                dfs(board, r-1, c, word, wordIndex+1) ||
+                        dfs(board, r, c+1, word, wordIndex+1) ||
+                        dfs(board, r+1, c, word, wordIndex+1) ||
+                        dfs(board, r, c-1, word, wordIndex+1)
+        ){
+            return true;
+        }
+
+        //backracking
+        board[r][c] = ch;
+        return false;
+    }
+}
