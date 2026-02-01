@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lecture_50 {
+public class PlayWithStrings {
     public static void main(String[] args) {
 
         System.out.println("----------------------------------------------------------------------------");

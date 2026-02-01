@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Lecture_55 {
+public class CheckIfTwoStringsAreAnagrams {
     public static void main(String[] args) {
         boolean res1 = areAnagrams1("ABCD", "DABC");
         System.out.println(res1);

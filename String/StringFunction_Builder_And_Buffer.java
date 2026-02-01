@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class Lecture_49 {
+public class StringFunction_Builder_And_Buffer {
     public static void main(String[] args) {
 //        Scanner in = new Scanner(System.in);
 ////        System.out.println("Enter a word");

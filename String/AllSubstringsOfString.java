@@ -1,4 +1,4 @@
-public class Lecture_51 {
+public class AllSubstringsOfString {
     public static void main(String[] args) {
         //Print all Substrings of String
         //  s -> (n(n + 1)/2) + 1

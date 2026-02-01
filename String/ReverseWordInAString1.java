@@ -1,4 +1,4 @@
-public class Lecture_54 {
+public class ReverseWordInAString1 {
     public static void main(String[] args) {
         reverseWords1("   Hello  Coder   ");
         reverseWords2("   Hello  Coder   ");

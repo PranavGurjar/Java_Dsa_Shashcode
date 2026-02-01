@@ -1,24 +1,5 @@
 package Java;
 
-class Solution {
-    public long minimumSteps(String s) {
-        int n = s.length();
-        int last = 0;
-        int swapCount = 0;
-        for (int curr = 0; curr < n; curr++) {
-            if (s.charAt(curr) == '1'){
-                continue;
-            }
-            else {
-                //white ball
-                swapCount += (curr - last);     //imag swapping
-                last++;
-            }
-        }
-        return swapCount;
-    }
-}
-
 public class SeparateBlackAndWhiteBalls {
     public static void main(String[] args) {
         String str = "110010110";

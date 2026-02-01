@@ -1,4 +1,4 @@
-public class Lecture_52 {
+public class ReverseStringUsingStringBuilder {
     public static void main(String[] args) {
         //  Reverse Strings StringBuilder | Char Array | Concatenation
         System.out.println("Reverse Strings StringBuilder | Char Array | Concatenation");

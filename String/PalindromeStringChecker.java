@@ -1,4 +1,4 @@
-public class Lecture_53 {
+public class PalindromeStringChecker {
     public static void main(String[] args) {
 //        boolean res = checkPalindrome("NAMAN");
 

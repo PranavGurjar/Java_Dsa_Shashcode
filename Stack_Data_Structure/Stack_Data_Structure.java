@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 //Stack Data Structure Using Array
 
-public class Lecture_57 {
+public class Stack_Data_Structure {
     public static void main(String[] args) {
         Scanner in  = new Scanner(System.in);
         System.out.println("Enter the Size of stack : ");

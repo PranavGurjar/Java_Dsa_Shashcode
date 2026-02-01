@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 //Valid Parentheses
-public class Lecture_58 {
+public class Valid_Parenthesis {
     public static void main(String[] args) {
         System.out.println(isValid("({[]})"));
     }
