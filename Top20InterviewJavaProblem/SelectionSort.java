@@ -14,7 +14,9 @@ public class SelectionSort {
             for(int j=i+1; j<arr.length; j++){
                 if(arr[j] < arr[min]) min = j;
             }
-            int t = arr[min]; arr[min] = arr[i]; arr[i] = t;
+            int t = arr[min];
+            arr[min] = arr[i];
+            arr[i] = t;
         }
     }
 }
