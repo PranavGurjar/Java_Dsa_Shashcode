@@ -1,4 +1,7 @@
-package Tree_Data_Structure.Heap_And_PriorityQueue;
+package Heap_And_PriorityQueue;
 
 public class MinimumCostOfRopes {
+    public static void main(String[] args) {
+        
+    }
 }

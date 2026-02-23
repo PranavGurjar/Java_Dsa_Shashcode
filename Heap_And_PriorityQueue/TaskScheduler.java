@@ -1,4 +1,4 @@
-package Tree_Data_Structure.Heap_And_PriorityQueue;
+package Heap_And_PriorityQueue;
 
 import java.util.HashMap;
 import java.util.LinkedList;
