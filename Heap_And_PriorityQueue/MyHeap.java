@@ -1,4 +1,4 @@
-package Tree_Data_Structure;
+package Tree_Data_Structure.Heap_And_PriorityQueue;
 
 class MyHeap {
     int heapSize;
