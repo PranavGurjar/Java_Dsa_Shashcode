@@ -5,6 +5,9 @@ import java.util.List;
 
 public class MinimumTimeToCollectAllApplesInaTree {
     public static void main(String[] args) {
+//        Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]],
+//        hasApple = [false,false,true,false,true,true,false]
+//        Output: 8
 
     }
 

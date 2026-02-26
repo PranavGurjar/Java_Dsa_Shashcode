@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class CycleDetectionInDirectedGraphsUsingDFS {
     public static void main(String[] args) {
+//        Input: V = 4, edges[][] = [[0, 1], [1, 2], [2, 0], [2, 3]]
+//        Output: true
+
 
     }
 

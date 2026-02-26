@@ -4,6 +4,11 @@ import java.util.*;
 
 public class AccountsMerge {
     public static void main(String[] args) {
+//        Input: accounts = [["John","johnsmith@mail.com","john_newyork@mail.com"],
+//        ["John","johnsmith@mail.com","john00@mail.com"],["Mary","mary@mail.com"],
+//        ["John","johnnybravo@mail.com"]]
+//          Output: [["John","john00@mail.com","john_newyork@mail.com","johnsmith@mail.com"],
+//          ["Mary","mary@mail.com"],["John","johnnybravo@mail.com"]]
 
     }
 

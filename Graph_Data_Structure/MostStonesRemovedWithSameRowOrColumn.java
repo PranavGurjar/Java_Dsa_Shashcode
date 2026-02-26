@@ -5,6 +5,9 @@ import java.util.List;
 
 public class MostStonesRemovedWithSameRowOrColumn {
     public static void main(String[] args) {
+//        Input: stones = [[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]]
+//        Output: 5
+
 
     }
 

@@ -4,22 +4,27 @@ import java.util.*;
 
 public class GetWatchedVideosByYourFriends {
     public static void main(String[] args) {
+        String [][]watchVideos = {{"A","B"},{"C"},{"B","C"},{"D"}};
+        int [][]friends = {{1,2},{0,3},{0,3},{1,2}};
+        int id = 0, level = 2;
 
+        // ✅ convert array -> List<List<String>>
+        List<List<String>> watchedVideos = new ArrayList<>();
+        for (String[] row : watchVideos) {
+            watchedVideos.add(Arrays.asList(row));
+        }
+
+        List<String> watchedVideosByFriends = watchedVideosByFriends(watchedVideos, friends, id, level);
+        System.out.println("watchedVideosByFriends : "+watchedVideosByFriends);
     }
-}
-class Solution {
-    class Pair implements Comparable<Pair>{
+
+    static class Pair implements Comparable<Pair>{
         String video;
         int freq;
 
         public Pair(String video, int freq) {
             this.video = video;
             this.freq = freq;
-        }
-
-        @Override
-        public String toString() {
-            return "Pair {video = " + video +", freq = " + freq +"}";
         }
 
         @Override
@@ -30,7 +35,8 @@ class Solution {
             return this.freq - that.freq;
         }
     }
-    public List<String> watchedVideosByFriends(List<List<String>> watchedVideos, int[][] friends, int id, int level) {
+    public static List<String> watchedVideosByFriends(List<List<String>> watchedVideos,
+                                               int[][] friends, int id, int level) {
         //BFS
         Queue<Integer> queue = new LinkedList<>();
         HashSet<Integer> visited = new HashSet<>();

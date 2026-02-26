@@ -5,10 +5,16 @@ import java.util.Queue;
 
 public class RottingOranges {
     public static void main(String[] args) {
+        int [][]grid = {{2,1,1},{1,1,0},{0,1,1}};
 
+//        int orangesRotting1 = orangesRotting1(grid);
+//        System.out.println("orangesRotting1 : "+orangesRotting1);
+
+        int orangesRotting2 = orangesRotting2(grid);
+        System.out.println("orangesRotting2 : "+orangesRotting2);
     }
 
-    public int orangesRotting1(int[][] grid) {
+    public static int orangesRotting1(int[][] grid) {
         int n = grid.length;
         int m = grid[0].length;
         int freshCount = 0;
@@ -57,7 +63,7 @@ public class RottingOranges {
         return (freshCount == 0)?time:-1;
     }
 
-    public int orangesRotting2(int[][] grid) {
+    public static int orangesRotting2(int[][] grid) {
         int n = grid.length;
         int m = grid[0].length;
         int freshCount = 0;
