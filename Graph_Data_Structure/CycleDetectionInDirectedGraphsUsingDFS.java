@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 public class CycleDetectionInDirectedGraphsUsingDFS {
     public static void main(String[] args) {
-//        Input: V = 4, edges[][] = [[0, 1], [1, 2], [2, 0], [2, 3]]
-//        Output: true
 
+        int [][]edges = {{0, 1},{1, 2},{2, 0},{2, 3}};
+        int V = 4;
+        boolean cyclic = isCyclic(V, edges);
+        System.out.println("cyclic : "+cyclic);
 
     }
 
-    public boolean isCyclic(int V, int[][] edges) {
+    public static boolean isCyclic(int V, int[][] edges) {
         // ✅ build adjacency list (DIRECTED graph)
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         for (int i = 0; i < V; i++) adj.add(new ArrayList<>());
@@ -33,7 +35,7 @@ public class CycleDetectionInDirectedGraphsUsingDFS {
         return false;
     }
 
-    public boolean dfs(int src, boolean []visited,
+    public static boolean dfs(int src, boolean []visited,
                        ArrayList<ArrayList<Integer>> adj,
                        boolean []pathVisited){
         visited[src] = true;

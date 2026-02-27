@@ -5,14 +5,13 @@ import java.util.List;
 
 public class MostStonesRemovedWithSameRowOrColumn {
     public static void main(String[] args) {
-//        Input: stones = [[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]]
-//        Output: 5
-
-
+        int [][]stones = {{0,0},{0,1},{1,0},{1,2},{2,1},{2,2}};
+        int removeStones = removeStones(stones);
+        System.out.println("removeStones : "+removeStones);
     }
 
     //DSU
-    public void dfs(int src, List<List<Integer>> adjList, boolean []visited){
+    public static void dfs(int src, List<List<Integer>> adjList, boolean []visited){
         visited[src] = true;
         for (int neighbour : adjList.get(src)){
             if (!visited[neighbour]){
@@ -20,7 +19,7 @@ public class MostStonesRemovedWithSameRowOrColumn {
             }
         }
     }
-    public int removeStones(int[][] stones) {
+    public static int removeStones(int[][] stones) {
         int n = stones.length;
         //create the adjList
         List<List<Integer>> adjList = new ArrayList<>();

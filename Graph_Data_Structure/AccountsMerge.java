@@ -4,15 +4,20 @@ import java.util.*;
 
 public class AccountsMerge {
     public static void main(String[] args) {
-//        Input: accounts = [["John","johnsmith@mail.com","john_newyork@mail.com"],
-//        ["John","johnsmith@mail.com","john00@mail.com"],["Mary","mary@mail.com"],
-//        ["John","johnnybravo@mail.com"]]
-//          Output: [["John","john00@mail.com","john_newyork@mail.com","johnsmith@mail.com"],
-//          ["Mary","mary@mail.com"],["John","johnnybravo@mail.com"]]
+        String [][]allAccounts = {{"John","johnsmith@mail.com","john_newyork@mail.com"},
+        {"John","johnsmith@mail.com","john00@mail.com"},{"Mary","mary@mail.com"},
+        {"John","johnnybravo@mail.com"}};
 
+        List<List<String>> accounts = new ArrayList<>();
+        for (String []a : allAccounts){
+            accounts.add(new ArrayList<>(Arrays.asList(a)));
+        }
+
+        List<List<String>> accountsMerge = accountsMerge(accounts);
+        System.out.println("accountsMerge : "+accountsMerge);
     }
 
-    public List<List<String>> accountsMerge(List<List<String>> accounts) {
+    public static List<List<String>> accountsMerge(List<List<String>> accounts) {
         //adj map
         HashMap<String, List<String>> adjMap = new HashMap<>();
         for (List<String> account : accounts){
@@ -45,7 +50,7 @@ public class AccountsMerge {
         return res;
     }
 
-    private void dfs(String srcEmail, HashSet<String> visited,
+    private static void dfs(String srcEmail, HashSet<String> visited,
                      HashMap<String, List<String>> adjMap,
                      List<String> sublist) {
         visited.add(srcEmail);

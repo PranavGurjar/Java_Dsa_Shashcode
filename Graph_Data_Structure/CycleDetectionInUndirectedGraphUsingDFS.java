@@ -6,11 +6,13 @@ import java.util.Queue;
 
 public class CycleDetectionInUndirectedGraphUsingDFS {
     public static void main(String[] args) {
-//        Input: V = 4, E = 4, edges[][] = [[0, 1], [0, 2], [1, 2], [2, 3]]
-//        Output: true
+        int [][]edges = {{0, 1},{0, 2},{1, 2},{2, 3}};
+        int V = 4, E = 4;
+        boolean cycleDFS = isCycleDFS(V, edges);
+        System.out.println("cycleDFS : "+cycleDFS);
     }
 
-    public boolean isCycleDFS(int V, int[][] edges) {
+    public static boolean isCycleDFS(int V, int[][] edges) {
         // ✅ build adjacency list from edges
         ArrayList<ArrayList<Integer>> adjList = new ArrayList<>();
         for (int i = 0; i < V; i++) adjList.add(new ArrayList<>());
@@ -31,7 +33,7 @@ public class CycleDetectionInUndirectedGraphUsingDFS {
         return false;
     }
 
-    public boolean checkIfCycle(int src, int parent, ArrayList<ArrayList<Integer>> adjList, boolean []visited){
+    public static boolean checkIfCycle(int src, int parent, ArrayList<ArrayList<Integer>> adjList, boolean []visited){
         visited[src] = true;
         for (int neighbour : adjList.get(src)){
             if (neighbour == parent) continue;

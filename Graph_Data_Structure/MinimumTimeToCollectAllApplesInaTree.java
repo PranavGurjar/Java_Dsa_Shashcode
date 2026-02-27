@@ -1,17 +1,23 @@
 package Graph_Data_Structure;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MinimumTimeToCollectAllApplesInaTree {
     public static void main(String[] args) {
-//        Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]],
-//        hasApple = [false,false,true,false,true,true,false]
-//        Output: 8
-
+        int [][]edges = {{0,1},{0,2},{1,4},{1,5},{2,3},{2,6}};
+        int n = 7;
+        boolean []hasApples = {false,false,true,false,true,true,false};
+        List<Boolean> hasApple = new ArrayList<>();
+        for (boolean b : hasApples) {
+            hasApple.add(b);
+        }
+        int minTime = minTime(n, edges, hasApple);
+        System.out.println("minTime : "+minTime);
     }
 
-    public int minTime(int n, int[][] edges, List<Boolean> hasApple) {
+    public static int minTime(int n, int[][] edges, List<Boolean> hasApple) {
         //adj list
         List<List<Integer>> adjList = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -26,7 +32,7 @@ public class MinimumTimeToCollectAllApplesInaTree {
         return dfs(0, -1, adjList, hasApple);
     }
 
-    private int dfs(int src, int parent, List<List<Integer>> adjList, List<Boolean> hasApple) {
+    private static int dfs(int src, int parent, List<List<Integer>> adjList, List<Boolean> hasApple) {
         int totalTime = 0;
         for (int neighbour : adjList.get(src)){
             if (neighbour == parent) continue;
